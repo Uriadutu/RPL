@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Baloo 2', cursive;
+}
+h2 {
+    color: var(--hitam);
+}  
+
+:root{
+    --bg-color: #9A0000; 
+    --text-color: #fff;
+    --color-main :#E1B20C;
+    --judul-size: 36px;
+    --sub-size: 20px;
+    --tombol-color: #E1B20C;
+    --hitam: black;
+}
+html{
+    font-size: 62.5%;
+    color: var(--text-color) ;
+}
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 5%;
+    background: var(--color-main);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    
+}
+section {
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+   
+} 
+
+
+
+/* batas */
+/* batas default */
+
+/* RESPONSIVE */
+@media (max-width: 952px){
+    .text-logo h1 {
+        font-size: 30px;
+    }
+    
+}
+
+/* BATAS RESPON */
+
+/* DALAM */
+/* ----------- */
+.login {
+    /* padding: 5% 5%; */
+    margin-top: 10px;
+    justify-content: center ;
+    /* width: 50rem;
+    height: 45rem; */
+    /* padding: 3rem 5%; */
+}
+.box {
+    padding: 5% 5%;
+    /* width: 50rem;
+    height: 45rem; */
+    background: white;
+    border: 2px solid black;
+    border-radius: 10px;
+
+}
+ul, li {
+    margin-top: 3px;
+    color: black;
+    list-style: none;
+    font-size: 15px;
+}
+.input1 {
+    justify-content: right;
+    display: inline-block;
+    padding: 1px 2.8rem;
+    border: 1px solid black;
+    border-radius: 1rem;
+    font-size: 20px;
+    color: black;
+    margin-top: 20px;
+    background: white;
+}
+.input1 :hover {
+    background: #444;
+}
+.box h1{
+    color: black;
+    font-size: var(--judul-size);
+    text-align: left;
+    border-bottom: 2px solid black;
+    margin-top: 30px;
+}
+.input {
+    margin-top: 20px;
+    font-size: 20px;
+    padding-top: 20px;
+    
+}
+.isi {
+    margin-top: 10px;
+}
+.isi .input {
+    height: 35px;
+    background: transparent;
+    border: 1px solid black;
+    padding: 2% 10px;  
+    /* border-radius: 10px; */
+}
+.sekolah {
+    padding: 10px 10px;
+    display: flex;
+    align-items: center;
+}
+.sklh{
+    width: 62px;
+    height: 62px;
+}
+.judul h3{
+    color: black;
+    font-size: 22px;
+}
+.Garis {
+    border-top: 2px solid black;
+    margin-top: 40px;
+}
+/* .Garis h1{  */
+.judul p{
+    color: black;
+    font-size: 15px;
+}
+.judul {
+    margin-left: 20px;
+    
+}
+.judul1 h2 {
+   color: white;
+}
+.judul1 h1{
+    color: var(--text-color);
+    font-size: 30px;
+}
+.awal {
+    display: flex ;
+    justify-content: space-between;
+    /* margin-left: 30px; */
+}

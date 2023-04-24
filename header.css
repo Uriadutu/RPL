@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Baloo 2', cursive;
+    list-style: none;
+}
+
+:root{
+    --bg-color: #9A0000;
+    --text-color: #fff;
+    --color-main :#E1B20C;
+    --judul-size: 36px;
+    --sub-size: 20px;
+    --tombol-color: #E1B20C;
+}
+html{
+    font-size: 62.5%;
+    color: var(--text-color) ;
+}
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+ 
+section {
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;  
+}
+
+/* batas default  */
+/* ------------ */
+
+/* RESPONSIF  */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 5%;
+    background: var(--color-main);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    /* background:var(--color-main); */
+}
+.btn3 {
+    float: right;
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    line-height: 80px;
+    display: none;
+    margin-left: 80px;
+    cursor: pointer;
+}
+nav .logo img{
+    /* line-height: 80px;
+    padding: 0 50px;
+    margin-top: 20px; */
+    
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+
+}
+nav ul li {
+    display: inline-block;
+    /* line-height: 80px; */
+    margin: 0 5px;
+}
+
+nav ul li a {
+    font-size: 17px;
+    color: #fff;
+    padding: 10px 17px;
+    border-radius: 3px;
+}
+#check {
+    display: none;
+}
+
+@media (max-width: 768px){
+    /* .home {
+        margin-top : 30px;
+    } */
+    nav {
+        padding: 2rem 5%;
+    }
+    /* nav .logo img {
+        padding-left: 50px;
+    } */
+
+    nav ul li a {
+        font-size: 16px;
+    }
+    
+}
+
+/* Tablet */
+
+@media (max-width: 768px){
+    /* defaulf */
+    section {
+        padding: 14rem 3% 2rem;  
+    }
+    /* Beranda */
+
+    .tampilan {
+        margin-top : 0px;
+    }
+    .tampilan img {
+        width: 310px;
+        aspect-ratio : 1/1;
+    }
+    .tampil .btn {
+        font-size : 13px;
+    }
+    .tampil h1 {
+        font-size : 26px;
+        width: 300px;
+    }
+    .tampil h2 {
+        font-size : 15px;
+        width: 200px;
+        border-left : 1px solid white;
+        margin-left : 0px;
+        padding : 0px 10px;
+    }
+    /* Batas Beranda */
+    /* Fitur */
+    .fitur-judul h1{
+        font-size : 26px;
+    } 
+    .fitur-judul p {
+        font-size : 15px;
+        width: 500px;
+    
+    }
+    /* Batas Fitur */
+
+    .btn3{
+        display: block;
+        margin-right: 30px;
+        
+    }
+    ul {
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        top: 13%;
+        left: -100%;
+        text-align: left;
+        transition: all .5s;
+        background: rgba(0, 0, 0, 0.5);
+    }
+    #check:checked ~ ul {
+        left: 0;
+
+    }
+    nav ul li {
+        /* justify-content: left; */
+        margin: 20px 0;
+        line-height: 30px;
+        display: block;
+    }
+    nav ul li a {
+        font-size: 20px;
+        margin-left: 20px;
+    }
+    a.aktif, a:hover{
+        background: rgba(0, 0, 0, 0.6);
+        /* border: 2px solid #555; */
+        color: #E1B20C;
+    }
+    
+}
+
+/* Mobile */
+@media ( max-width : 425px) {
+    /* defaulf */
+    section {
+        padding: 14rem 7% 2rem;  
+    }
+
+    /* Beranda  */
+    .logo_sekolah {
+        width: 100px;
+        height: 100px;
+        /* object-fit : cover; */
+        aspect-ratio : 1/1;
+    }
+    .tampilan {
+        margin-top : 0px;
+    }
+    .text-logo h1{
+        font-size : 30px;
+        width : 500px;
+
+    }
+    .tampil .btn {
+        font-size : 13px;
+    }
+    .tampil h1 {
+        font-size : 26px;
+        width: 300px;
+    }
+    .tampil h2 {
+        font-size : 12px;
+        width: 200px;
+        border-left : 1px solid white;
+        margin-left : 0px;
+        padding : 0px 10px;
+    }
+    /* Fitur */
+}
+
+/* BATAS RESPONSIF */
+
+
+/* tombol default */
+.btn {
+    margin-top: 10px;
+    display: inline-block;
+    padding: 5px 2.8rem;
+    background-color: var(--tombol-color);
+    border-radius: 1rem;
+    font-size: 15px;
+    color: var(--text-color);
+    margin-right: 20px;
+    
+}
+.btn1 {
+    display: inline-block;
+    padding: 5px 2.8rem;
+    background-color: #666;
+    border-radius: 1rem;
+    font-size: 15px;
+    color: var(--text-color);
+}
+.btn1 :hover {
+    background-color: #555;
+}
+
+.btn2 {
+    margin-top: 10px;
+    display: flex;
+    padding: 5px 2.8rem;
+    background-color: var(--tombol-color);
+    border-radius: 1rem;
+    font-size: 15px;
+    color: var(--text-color);
+}
+/* ini isi dari css kita */
+
+/* header */
+
+/* .header { */
+    /* position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: var(--color-main);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100; */
+/* } */
+.navbar a{
+    font-size: 1.7rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    transition: 0.3s;
+}
+
+/* .navbar a:hover {
+    color: #9A0000;
+} */
+
+/* fungsi dari ini  */
+/* ------------- */
+/* .aktif {
+    border-bottom: 2px solid #555;
+} */
+/* a:hover {
+    border-bottom: 2px solid #555;
+    color: #9A0000;
+} */
+
+
+/* batas fungs */
+
+
+
+/* mainnya */
+/* batas */
+
+/* RESPONSIFE */
+
+/* BATAS RESPONSIF */
+/* dalam */
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo_sekolah {
+    width: 100px;
+    height: 100px;
+}
+.text-logo {
+    margin-left: 30px;
+}
+.text-logo h1{
+    font-size: var(--judul-size);
+}
+.tampilan {
+    margin-top: 50px;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+.tampil h1 {
+    width: 76%;
+    font-size: var(--judul-size);
+    margin-bottom: 30px;
+}
+.tampil h2 {
+    border-left: 3px solid white;
+    width: 46%;
+    font-size: px;
+    margin-left: 10px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+/* ini fitur */
+/* --------------- */
+
+/* Video */
+
+/* bats video */
+
+/* buku */
+
+/* ------------- */
+/* batas dari fitur */

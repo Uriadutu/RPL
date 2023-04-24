@@ -1,0 +1,17 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+:root{
+    --bg-color: #9A0000;
+    --text-color: #fff;
+    --color-main :#E1B20C;
+    --judul-size: 36px;
+    --sub-size: 20px;
+    --tombol-color: #E1B20C;
+}
+
+.footer {
+    background: var(--color-main);
+    text-align: center;
+}
