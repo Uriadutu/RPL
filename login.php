@@ -59,11 +59,7 @@ if (isset($_POST['login'])) {
     <link rel="shortcut icon" href="Logo_Sekolah" type="image/x-icon">
 </head>
 <body>
-    <style>
-        .header {
-            padding: 2rem 5%;
-        }
-    </style>
+    
     <header class="header">
         <img src="./logo_kuis.png" alt="">
     </header>

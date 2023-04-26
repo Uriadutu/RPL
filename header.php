@@ -37,7 +37,7 @@ if(!isset($_SESSION['admin_Username'])){
                     <li><a href="#fitur">FITUR</a></li>
                     <li><a href="#bantuan">BANTUAN</a></li>
                     <?php } ?>
-                    <li><a href="#tentangkami">TENTANG KAMI</a></li>
+                    <li><a href="#kami">TENTANG KAMI</a></li>
                     <li><a class="btn1" href="logout.php" id="logout">Logout</a></li>
                 </ul>
                 <!-- <a href="#baranda" class="aktif">BARANDA</a>

@@ -15,6 +15,6 @@ if(!in_array('siswa', $_SESSION['admin_akses'])){
     <title>Document</title>
 </head>
 <body>
-    <h1>bsajbsxcbwucbdnch</h1>
+   
 </body>
 </html>

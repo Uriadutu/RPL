@@ -89,7 +89,9 @@ if(!in_array('siswa', $_SESSION['admin_akses'])){
             }
         </style>
         <div class="isi_pilih_soal">
-            <img src="./img/tampil.png" alt="">
+             
+            <img src="./img/tampil2.png" alt="">
+            
             <div class="soal">
                 <div class="jenis_soal">
                     <h1>MATEMATIKA</h1>
@@ -123,9 +125,7 @@ if(!in_array('siswa', $_SESSION['admin_akses'])){
                 </div>
                 <div class="tombolsoal">
                     <a href="hal1.php">Kembali</a>
-                    <?php if(in_array("batas", $_SESSION['admin_akses'])) { ?>
-                    <a href="">Leaderboard</a>
-                    <?php }?>
+                    
                 </div>
             </div>
         </div>

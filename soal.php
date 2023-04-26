@@ -3,13 +3,14 @@ include("header_lain.php");
 
     $koneksi=mysqli_connect("localhost","root","","latihan");
     if (isset($_POST['simpan'])) {
-        $soal=mysqli_real_escape_string($koneksi, $_POST['soal']);
-        $jawaban_benar=mysqli_real_escape_string($koneksi, $_POST['jb']);
+        $soal=mysqli_real_escape_string($koneksi, $_POST['id_soal']);
         $jawaban_1=mysqli_real_escape_string($koneksi, $_POST['j1']);
         $jawaban_2=mysqli_real_escape_string($koneksi, $_POST['j2']);
         $jawaban_3=mysqli_real_escape_string($koneksi, $_POST['j3']);
-        $simpan=mysqli_query($koneksi,"INSERT INTO soal_guru VALUES ('$soal','$jawaban_benar','$jawaban_1','$jawaban_2', '$jawaban_3')");  
+        $jawaban_benar=mysqli_real_escape_string($koneksi, $_POST['jb']);
+        $simpan=mysqli_query($koneksi,"INSERT INTO soal_guru VALUES ('$soal', '$jawaban_1', '$jawaban_2', '$jawaban_3', '$jawaban_benar')");  
     }
+// membuat koneksi ke database
 ?>
 
 <!DOCTYPE html>
@@ -32,7 +33,7 @@ include("header_lain.php");
                 Soal
             </td>            
             <td>
-                <input type="text" placeholder="Soal" name="soal" required>
+                <input type="text" placeholder="Soal" name="id_soal" required>
             </td>
         </tr>
         <tr>
@@ -88,7 +89,7 @@ include("header_lain.php");
         <?php
         $no=1;
         // $kode = mysqli_query($koneksi,"DELETE FROM soal_guru WHERE id_soal");
-        $soal_guru=mysqli_query($koneksi,"SELECT * FROM soal_guru ORDER BY soal ASC"); 
+        $soal_guru=mysqli_query($koneksi,"SELECT * FROM soal_guru ORDER BY id_soal ASC"); 
         while ($tampil_soal=mysqli_fetch_array($soal_guru)){
         ?> 
         <tr>
@@ -97,7 +98,7 @@ include("header_lain.php");
             <td><?= $tampil_soal['jawaban_1'] ?></td>
             <td><?= $tampil_soal['jawaban_2'] ?></td>
             <td><?= $tampil_soal['jawaban_3'] ?></td>
-            <td><?= $tampil_soal['soal'] ?></td>
+            <td><?= $tampil_soal['jawaban_benar'] ?></td>
             <td><a href="">Hapus</a></td>
         </tr>
         <?php } ?>
