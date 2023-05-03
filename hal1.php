@@ -62,7 +62,7 @@ if(!in_array('siswa', $_SESSION['admin_akses'])){
                         <h1>Video Pembelajaran</h1>
                         <p>Untuk mendapat pengetahuan lebih dalam, alangka baiknya untuk menonton video pembelajaran
                         </p>
-                         <a href="#">Masuk</a>
+                         <a href="">Masuk</a>
                     </div>
                 </div>
                
@@ -78,7 +78,7 @@ if(!in_array('siswa', $_SESSION['admin_akses'])){
                         <h1>Buku Online </h1>
                         <p>Untuk mendapat pengetahuan lebih dalam, alangka baiknya untuk Membaca Buku Pembelajaran Online
                         </p>
-                         <a href="#">Masuk</a>
+                         <a href="fiturbuku.php">Masuk</a>
                     </div>
                 </div>
                
@@ -137,7 +137,40 @@ if(!in_array('siswa', $_SESSION['admin_akses'])){
     </section>
 
     <?php } ?>
-    <section class="" id="kami">
+    <section class="tim" id="kami">
+        <h1 class="tegah">TIM KAMI</h1>
+        <div class="kotak-bungkus">
+            <div class="kotak-kami">
+            <div class="fotokami">
+                <img src="./img/koala.png" alt="">
+                <div class="keterangan">
+                    <h1>Project Manager</h1>
+                    <p>Christian Micah Ranti</p>
+                </div>
+            </div>
+            <div class="fotokami">
+                <img src="./img/koala.png" alt="">
+                <div class="keterangan">
+                    <h1>Programmer</h1>
+                    <p>Marthin Virnst Mangindaan</p>
+                </div>
+            </div>
+            <div class="fotokami">
+                <img src="./img/koala.png" alt="">
+                <div class="keterangan">
+                    <h1>System Analyst</h1>
+                    <p>Uria Dutu</p>
+                </div>
+            </div>
+            <div class="fotokami">
+                <img src="./img/koala.png" alt="">
+                <div class="keterangan">
+                    <h1>Designer</h1>
+                    <p>Gwent Nandasyah Labada</p>
+                </div>
+            </div>
+        </div>
+        </div>
     </section>
 
 
@@ -147,6 +180,40 @@ if(!in_array('siswa', $_SESSION['admin_akses'])){
 <?php 
 include("footer.php");
 ?>
+<!-- tentang kami style -->
+<style>
+    .tegah{
+       text-align : center ; 
+    }
+    .kotak-bungkus {
+        display : flex;
+        justify-content : center;
+    }
+    .tim h1 {
+        font-size : 26px;
+        /* text-align : center ; */
+    }
+    .kotak-kami{
+        display :inline-block;
+        padding : 20px 10% 20px 10%;
+        background : #E9B708;
+        font-size : 26px;
+        border-radius : 20px;
+        padding-right : 30%;
+    }
+    .fotokami {
+        display : flex;
+        margin-top : 30px
+    }
+    .keterangan {
+        margin-left : 60px;
+    }
+    .keterangan h1 {
+        color : rgba(255, 255, 255, 0.5);
+    }
+</style>
+
+
 <style>
     .kontak input {
         padding : 1px 4px;
@@ -209,3 +276,4 @@ include("footer.php");
 <style>
 
 </style>
+

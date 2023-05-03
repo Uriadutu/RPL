@@ -7,6 +7,7 @@
     <title>Document</title>
 </head>
 <body>
+  <script src="./java/isisoal.js"></script>
 
 <?php 
 $koneksi=mysqli_connect("localhost","root","","latihan");  
@@ -32,13 +33,26 @@ echo "
 // membuat halaman baru untuk setiap soal
 $no = 1;
 while ($row = mysqli_fetch_assoc($result)) {
-    $pilihan = [
-        "a" => $row["jawaban_1"],
-        "b" => $row["jawaban_2"],
-        "c" => $row["jawaban_3"],
-        "d" => $row["jawaban_benar"]
+
+            $pilihan = [
+        "a" => [
+            "opsi" => $row["jawaban_1"],
+            "benar" => 0
+                   ],
+        "b" => [
+            "opsi" => $row["jawaban_2"],
+            "benar" => 0
+                   ],
+        "c" => [
+            "opsi" => $row["jawaban_3"],
+            "benar" => 0
+                   ],
+        "d" => [
+            "opsi" => $row["jawaban_benar"],
+            "benar" => 1
+        ]
     ];
-    echo "<script>var jawabanBenar = '" . $pilihan['d'] . "';</script>";
+    // echo "<script>var jawabanBenar = '" . $pilihan['d'] . "';</script>";
     echo "</div>
     
 <div class='waktu'>
@@ -60,21 +74,20 @@ while ($row = mysqli_fetch_assoc($result)) {
     </div>
     ";
    
-    foreach ($pilihan as $key => $value) {
-    
-        echo 
-        "<div class='pilihan'>
-        <label>
-            <div class ='cek'>
-                <input type='radio' name='jawaban" . $no . "' value='d' id='cek''>" . $value . "<br>
-            </div>
-            
-        </label>
-        
-        </div>"; 
-        
 
+foreach ($pilihan as $key => $value) {
+    echo "<div class='pilihan'>";
+    echo "<label class='ubah'>";
+    echo "<div class='cek'>";
+    if ($value['benar'] == 1) {
+        echo "<input type='radio' name='jawaban" . $no . "' value='" . $key . "' id='cek' class='benar' onclick='cekDivClass(this)'>" . $value['opsi'] . "<br>";
+    } else {
+        echo "<input type='radio' name='jawaban" . $no . "' value='" . $key . "' id='cek' onclick='cekDivClass(this)'>" . $value['opsi'] . "<br>";
     }
+    echo "</div>";
+    echo "</label>";
+    echo "</div>"; 
+}
     
     
     
@@ -92,6 +105,9 @@ echo "<h1 id='benar'></h1>";
 mysqli_close($koneksi);
 ?> 
 <style>
+  .selected {
+  background-color: red;
+}
   .waktu {
     display : flex;
     justify-content: center;
@@ -157,8 +173,11 @@ mysqli_close($koneksi);
   .pilihan {
     padding : 2px 20%;
   }
-  .pilihan label {
+   .ubah {
     background : #E1B20C;
+   }
+  .pilihan label {
+    /* background : #E1B20C; */
     margin-top:20px;
     padding : 10px 0px;
     display : flex;
@@ -179,87 +198,3 @@ mysqli_close($koneksi);
 
   }
 </style>
-<script>
-
-// var benar = 0;
-var soalSaatIni = 1;
-var jumlahSoal = 5;
-var jawaban = [];
-function mulaiKuis() {
-  // menampilkan halaman pertama
-  const header1 = document.querySelector('.tayo');
-  document.getElementById("soal1").style.display = "block";
-  header1.classList.add("efek2"); 
-  const mulai = document.querySelector('.btn-mulai');
-  document.getElementById("soal1").style.display = "block";
-  mulai.classList.add("efek3"); 
-  var waktu = 130; // 30 menit dalam detik
-    var timer = setInterval(function() {
-    var menit = Math.floor(waktu / 60);
-    var detik = waktu % 60;
-
-    // menambahkan nol pada angka satuan detik yang kurang dari 10
-    if (detik < 10) {
-      detik = "0" + detik;
-    }
-
-    document.getElementById("timer").innerHTML ="Timer :"+ menit + ":" + detik;
-
-    waktu--;
-
-    // menghentikan timer jika waktu habis
-    if (waktu < 0) {
-      clearInterval(timer);
-      alert("Waktu habis!");
-      window.location.href = "soal.php";
-    }
-
-    // menghentikan timer jika kuis sudah selesai
-    if (soalSaatIni > jumlahSoal) {
-      clearInterval(timer);
-    }
-  }, 1000);
-  
-}
-var benar = 0;
-function kirimJawaban(no) {
-  
-  // menyimpan jawaban yang telah dipilih oleh user ke dalam array
-  var selected = document.querySelector('input[name="jawaban' + no + '"]:checked');
-  var jawabanBenar = "d";
-  var jawab = document.querySelector('input[name="jawaban' + no + '"][value="d"]:checked');
-
-
-
-if (selected) {
-    jawaban[no - 1] = selected.value; 
-    if (jawab) {
-        benar++;
-        alert("benar " +benar);
-    } 
-    // mengecek apakah jawaban yang dipilih sama dengan jawaban benar (dalam hal ini adalah 'd')  
-        
-}
-
-
-else {
-    alert("Silakan pilih jawaban terlebih dahulu!");
-    return;
-}
-
-// beralih ke halaman berikutnya atau menampilkan hasil jika sudah di halaman terakhir
-if (no < jumlahSoal) {
-    document.getElementById("soal" + no).style.display = "none";
-    soalSaatIni++;
-    document.getElementById("soal" + soalSaatIni).style.display = "block";
-} else {
-    document.getElementById("benar").innerHTML = "Benar : " + benar;
-    // menampilkan pesan atau tampilan baru saat soal terakhir telah dijawab
-    document.getElementById("soal" + no).style.display = "none";
-    document.getElementById("selesai").style.display = "block"; // ganti "selesai" dengan ID elemen tampilan baru yang ingin ditampilkan
-}
-}
-
-
-
-</script>

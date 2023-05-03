@@ -22,14 +22,14 @@ if(!isset($_SESSION['admin_Username'])){
 <body>
     <div id="app">
     <!-- <header class="header"> -->
-            <nav>
+            <nav id="navbar">
                 <input type="checkbox" id="check">
                 <label for="check" class="btn3">
                 <i class="fas fa-bars"></i>
                 <!-- <img src="logo_kuis.png" alt=""> -->
                 </label>
                 <label class="logo">
-                    <img src="./img/logo_kuis.png" alt="">
+                    <img src="./img/quiz.png" alt="">
                 </label>
                 <ul>
                     <li><a href="#baranda" class="aktif">BERANDA</a></li>
@@ -49,6 +49,27 @@ if(!isset($_SESSION['admin_Username'])){
                 <a class="btn1" href="logout.php" id="logout">Logout</a>   -->
             </nav>
     </div>
+    <style>
+        nav {
+            transition : 0.3s;
+        }
+        nav ul li a {
+            color : white;  
+            transition : 0.4s;
+        }
+        nav ul li a:hover{
+            color : red;
+        }
+        .btn1 {
+            background : #888;
+        }
+        .btn1:hover{
+            color : #999;
+            background : #555;
+        }
+
+    </style>
     
     <script src="anim.js"></script>
     <!-- </header> -->
+    

@@ -19,7 +19,7 @@ if(!isset($_SESSION['admin_Username'])){
     <div class="kami" id="">
         <div class="info">
             <div class="quizme">
-                <img src="logo_kuis.png" alt="">
+                <img src="quiz.png" alt="">
                 <p>QuizMe Merupakan Website Untuk Mengerjakan Soal-Soal Yang Diberikan Guru. 
                     Anda Juga Dapat Belajar Melalui Fitur-Fitur Yang Telah Tersediah Dalam Website ini.
                 </p>

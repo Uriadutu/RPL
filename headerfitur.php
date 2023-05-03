@@ -1,9 +1,10 @@
 <?php
 session_start();
 include("koneksi.php");
-if(!isset($_SESSION['admin_Username'])){
-    header("location:login.php");
-    // header("location:hal2.php");
+if(!in_array('batas', $_SESSION['admin_akses'])){
+    echo "kamu tidak punya akses disini";
+    include("footer.php");
+    exit();
 }
 //print_r($_SESSION['admin_akses']);
 ?>
@@ -29,12 +30,12 @@ if(!isset($_SESSION['admin_Username'])){
                 <label class="logo">
                     <img src="./img/quiz.png" alt="">
                 </label>
-                <h1>Good Spiritual, Good Character, Good Academic</h1>
+                <h1></h1>
                 <ul>
-                    <li><a href="hal1.php" class="aktif">Menu awal</a></li>
-                     <?php if(in_array("batas", $_SESSION['admin_akses'])) { ?>
-                    <li><a href="">Akhiri Kuis</a></li>
-                    <?php }?>
+                    <li><a href="#matematika">MATEMATIKA</a></li>
+                    <li><a href="#ipa">IPA</a></li>
+                    <li><a href="hal1.php">Menu awal</a></li>
+                     
                 </ul>
                 <!-- <a href="#baranda" class="aktif">BARANDA</a>
                

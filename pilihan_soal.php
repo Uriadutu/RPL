@@ -21,7 +21,7 @@ if(!in_array('siswa', $_SESSION['admin_akses'])){
 <body>
     
     <header class="header">
-        <img src="./logo_kuis.png" alt="">
+        <img src="./img/quiz.png" alt="">
     </header>
     <section>
         <div class="atas">
@@ -98,7 +98,7 @@ if(!in_array('siswa', $_SESSION['admin_akses'])){
                     <p>Pilih tingkat kesulitan</p>
                     <div class="tingkat_soal">
                         <div class="mudah">
-                            <a href="soal.php">Mudah</a>
+                            <a href="inputsoal.php">Mudah</a>
                         </div>
                         <div class="normal">
                             <a href="#">Normal</a>

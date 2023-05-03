@@ -8,7 +8,7 @@ include("header_lain.php");
         $jawaban_2=mysqli_real_escape_string($koneksi, $_POST['j2']);
         $jawaban_3=mysqli_real_escape_string($koneksi, $_POST['j3']);
         $jawaban_benar=mysqli_real_escape_string($koneksi, $_POST['jb']);
-        $simpan=mysqli_query($koneksi,"INSERT INTO soal_guru VALUES ('$soal', '$jawaban_1', '$jawaban_2', '$jawaban_3', '$jawaban_benar')");  
+        $simpan=mysqli_query($koneksi,"INSERT INTO soal_guru VALUES ('$soal', '$jawaban_1','$jawaban_2', '$jawaban_3', '$jawaban_benar')");  
     }
 // membuat koneksi ke database
 ?>
@@ -99,7 +99,7 @@ include("header_lain.php");
             <td><?= $tampil_soal['jawaban_2'] ?></td>
             <td><?= $tampil_soal['jawaban_3'] ?></td>
             <td><?= $tampil_soal['jawaban_benar'] ?></td>
-            <td><a href="">Hapus</a></td>
+            <td><button onclick="deleteRow">Hapus</button></td>
         </tr>
         <?php } ?>
         </table>
@@ -181,3 +181,21 @@ include("isisoal.php");
     <?php } ?>
 </body>
 </html>
+<script>
+    function deleteRow(id_soal) {
+    // Buat objek XMLHttpRequest
+    var xhr = new XMLHttpRequest();
+    
+    // Set callback function
+    xhr.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            alert(this.responseText);
+        }
+    };
+    
+    // Kirim AJAX request ke PHP script
+    xhr.open("POST", "delete_row.php", true);
+    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhr.send("id=" + id);
+}
+</script>

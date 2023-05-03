@@ -24,6 +24,7 @@ html{
     color: var(--text-color) ;
 }
 body {
+   
     background: var(--bg-color);
     color: var(--text-color);
 }
@@ -47,6 +48,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
     z-index: 100;
     /* background:var(--color-main); */
 }
@@ -246,7 +248,7 @@ nav ul li a {
     font-size: 15px;
     color: var(--text-color);
 }
-.btn1 :hover {
+.btn1:hover {
     background-color: #555;
 }
 

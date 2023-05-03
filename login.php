@@ -61,7 +61,7 @@ if (isset($_POST['login'])) {
 <body>
     
     <header class="header">
-        <img src="./logo_kuis.png" alt="">
+        <img src="/img/quiz.png" alt="">
     </header>
    <section class="awal">
         <div class="login">
@@ -137,3 +137,6 @@ if (isset($_POST['login'])) {
 </body>
 <!-- <script src="anim.js"></script> -->
 </html>
+<?php 
+include ("footer-fitur.php");
+?>
