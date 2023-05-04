@@ -98,13 +98,13 @@ if(!in_array('siswa', $_SESSION['admin_akses'])){
                     <p>Pilih tingkat kesulitan</p>
                     <div class="tingkat_soal">
                         <div class="mudah">
-                            <a href="inputsoal.php">Mudah</a>
+                            <a href="i-mtk-mudah.php">Mudah</a>
                         </div>
                         <div class="normal">
-                            <a href="#">Normal</a>
+                            <a href="i-mtk-normal.php">Normal</a>
                         </div>
                         <div class="sulit">
-                            <a href="#">sulit</a>
+                            <a href="i-mtk-sulit.php">sulit</a>
                         </div>
                     </div>
                 </div>
@@ -113,13 +113,13 @@ if(!in_array('siswa', $_SESSION['admin_akses'])){
                     <p>Pilih tingkat kesulitan</p>
                     <div class="tingkat_soal">
                         <div class="mudah">
-                            <a href="#">Mudah</a>
+                            <a href="i-ipa-mudah.php">Mudah</a>
                         </div>
                         <div class="normal">
-                            <a href="#">Normal</a>
+                            <a href="i-ipa-normal.php">Normal</a>
                         </div>
                         <div class="sulit">
-                            <a href="#">sulit</a>
+                            <a href="i-ipa-sulit.php">sulit</a>
                         </div>
                     </div>
                 </div>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Input soal</title>
+    <title>Quizme</title>
 </head>
 <body>
     <?php
@@ -46,7 +46,7 @@
 // include "header_lain.php";
 include "conn.php";
   if (isset($_POST['simpan'])) {
-        mysqli_query($koneksi, "insert into soal_guru set
+        mysqli_query($koneksi, "insert into mtk_mudah set
         id_soal = '$_POST[id_soal]',
         jawaban_1 ='$_POST[jawaban_1]',
         jawaban_2 ='$_POST[jawaban_2]',
@@ -72,7 +72,7 @@ include "conn.php";
         <?php
         include "conn.php";
         $no = 1;
-        $data = mysqli_query($koneksi, "select * from soal_guru ");
+        $data = mysqli_query($koneksi, "select * from mtk_mudah ");
         while ($tampil = mysqli_fetch_array($data)){
             echo "
             <tr>
@@ -96,7 +96,7 @@ include "conn.php";
 <?php } ?>
 <?php
 if(isset($_GET['kode'])){
-    mysqli_query($koneksi, "delete from soal_guru where id_soal='$_GET[kode]'");
+    mysqli_query($koneksi, "delete from mtk_mudah where id_soal='$_GET[kode]'");
     echo "<meta http-equiv=refresh content=2;URL='inputsoal.php'>";
 }
 
@@ -110,7 +110,7 @@ if(isset($_GET['kode'])){
         <section>
             
             <?php 
-include("isisoal.php");
+include("mtk_mudah.php");
 ?>
         </section>
         <style>

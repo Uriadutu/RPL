@@ -32,9 +32,6 @@ if(!isset($_SESSION['admin_Username'])){
                 <h1>Good Spiritual, Good Character, Good Academic</h1>
                 <ul>
                     <li><a href="hal1.php" class="aktif">Menu awal</a></li>
-                     <?php if(in_array("batas", $_SESSION['admin_akses'])) { ?>
-                    <li><a href="">Akhiri Kuis</a></li>
-                    <?php }?>
                 </ul>
                 <!-- <a href="#baranda" class="aktif">BARANDA</a>
                

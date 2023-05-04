@@ -23,26 +23,44 @@ if(!in_array('batas', $_SESSION['admin_akses'])){
             <div class="kotak">
                 <div class="judul">
                     <p>BAB 1 – Operasi Hitung Bilangan Bulat</p>
+                    <div class="tes">
+                        <p>By zenius.net/</p>
+                    </div> 
                     <a href="https://www.zenius.net/lp/cg127/bab-1-operasi-hitung-bilangan-bulat/">Lihat</a>
                 </div>                
                 <div class="judul">
                     <p>BAB 2 – Pengukuran Waktu, Sudut, Jarak, & Kecepatan</p>
+                    <div class="tes">
+                        <p>By zenius.net/</p>
+                    </div> 
                     <a href="https://www.zenius.net/lp/cg128/bab-2-pengukuran-waktu,-sudut,-jarak,-and-kecepatan/">Lihat</a>
                 </div>                
                 <div class="judul">
                     <p>BAB 3 – Luas Bangun Datar Sederhana</p>
+                    <div class="tes">
+                        <p>By zenius.net/</p>
+                    </div> 
                     <a href="https://www.zenius.net/lp/cg129/bab-3-luas-bangun-datar-sederhana/">Lihat</a>
                 </div>                
                 <div class="judul">
                     <p>BAB 4 – Volume Kubus dan Balok</p>
+                    <div class="tes">
+                        <p>By zenius.net/</p>
+                    </div> 
                     <a href="https://www.zenius.net/lp/cg130/bab-4-volume-kubus-dan-balok/">Lihat</a>
                 </div>                
                 <div class="judul">
                     <p>BAB 5 – Pecahan</p>
+                    <div class="tes">
+                        <p>By zenius.net/</p>
+                    </div> 
                     <a href="https://www.zenius.net/lp/cg131/bab-5-pecahan/">Lihat</a>
                 </div>                
                 <div class="judul">
                     <p>BAB 6 – Sifat-sifat Bangun & Hubungan Antar Bangun</p>
+                    <div class="tes">
+                        <p>By zenius.net/</p>
+                    </div> 
                     <a href="https://www.zenius.net/lp/cg132/bab-6-sifat-sifat-bangun-and-hubungan-antar-bangun/">Lihat</a>
                 </div>                
             </div>
@@ -57,38 +75,65 @@ if(!in_array('batas', $_SESSION['admin_akses'])){
             <div class="kotak">
                 <div class="judul">
                     <p>Bab 01 – Organ Tubuh Manusia dan Hewan</p>
+                    <div class="tes">
+                        <p>By zenius.net/</p>
+                    </div>
                     <a href="https://www.zenius.net/lp/cg392/bab-01-organ-tubuh-manusia-dan-hewan/">Lihat</a>
                 </div>                
                 <div class="judul">
                     <p>Bab 02 – Tumbuhan Hijau</p>
+                    <div class="tes">
+                        <p>By zenius.net/</p>
+                    </div>
                     <a href="https://www.zenius.net/lp/cg393/bab-02-tumbuhan-hijau/">Lihat</a>
                 </div>                
                 <div class="judul">
                     <p>Bab 03 – Penyesuaian Makhluk Hidup Dengan Lingkungannya</p>
+                    <div class="tes">
+                        <p>By zenius.net/</p>
+                    </div>
                     <a href="https://www.zenius.net/lp/cg394/bab-03-penyesuaian-makhluk-hidup-dengan-lingkungannya/">Lihat</a>
                 </div>                
                 <div class="judul">
                     <p>Bab 04 – Bahan Penyusun Benda dan Sifatnya</p>
+                    <div class="tes">
+                        <p>By zenius.net/</p>
+                    </div>
                     <a href="https://www.zenius.net/lp/cg395/bab-04-bahan-penyusun-benda-dan-sifatnya/">Lihat</a>
                 </div>                
                 <div class="judul">
                     <p>Bab 05 – Perubahan Sifat Benda</p>
+                    <div class="tes">
+                        <p>By zenius.net/</p>
+                    </div>
                     <a href="https://www.zenius.net/lp/cg396/bab-05-perubahan-sifat-benda/">Lihat</a>
                 </div>                
                 <div class="judul">
                     <p>Bab 06 – Gaya</p>
+                    <div class="tes">
+                        <p>By zenius.net/</p>
+                    </div>
                     <a href="https://www.zenius.net/lp/cg397/bab-06-gaya/">Lihat</a>
                 </div>                
                 <div class="judul">
                     <p>Bab 07 – Pesawat Sederhana</p>
+                    <div class="tes">
+                        <p>By zenius.net/</p>
+                    </div>
                     <a href="https://www.zenius.net/lp/cg398/bab-07-pesawat-sederhana/">Lihat</a>
                 </div>                
                 <div class="judul">
                     <p>Bab 08 – Cahaya</p>
+                    <div class="tes">
+                        <p>By zenius.net/</p>
+                    </div>
                     <a href="https://www.zenius.net/lp/cg399/bab-08-cahaya/">Lihat</a>
                 </div>                
                 <div class="judul">
-                    <p>Bab 09 – Bumi dan Alam Semesta</p>
+                    <p>Bab 09 – Bumi dan Alam Semesta</p>   
+                    <div class="tes">
+                        <p>By zenius.net/</p>
+                    </div>                 
                     <a href="https://www.zenius.net/lp/cg400/bab-09-bumi-dan-alam-semesta/">Lihat</a>
                 </div>                
             </div>
@@ -121,6 +166,29 @@ if(!in_array('batas', $_SESSION['admin_akses'])){
         align-items: center;
         margin-bottom : 30px;
     }
+    .judul .tes {
+        margin-left: auto;
+    }
+    .judul:nth-child(2) {
+        margin-right: auto;
+    } 
+
+    .tes p {
+        /* margin-right: 200px; */
+        opacity: 0;
+        transform: translateX(-20px);
+        transition: all 0.3s ease-out;
+        /* margin : 0; */
+        /* transform: translateX(50px); */
+    }
+
+    .judul p:hover + .tes p {
+        display: flex;
+        justify-content: right;
+        opacity: 1;
+        transform: translateX(0);
+    }
+    
     .judul a {
         padding : 5px 50px;
         border-radius: 10px;
